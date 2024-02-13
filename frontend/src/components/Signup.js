@@ -51,7 +51,7 @@ export default function SignUp() {
     axios.post('http://localhost:8080/register', {
       firstName: data.get('firstName'),
       email: data.get('email'),
-      password: data.get('password'),
+      password: data.get('pas'),
       role: role,
     }).then(res => {
       console.log(res.data);
