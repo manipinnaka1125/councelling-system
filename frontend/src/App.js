@@ -7,10 +7,11 @@ import Appointment from './components/Appointment';
 import Visitor from './components/Visitor';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
-import Counsellor from './components/Counsellor';
+
 import Contact from './components/Contact';
 import About from './components/About';
-import ProductCatalog from './components/ProductCatalog';
+
+import FetchRegistration from './components/Fetchregistrations';
 
 
 function App() {
@@ -24,13 +25,14 @@ function App() {
       <Route path='/' element={<Home/>} exact/>
         <Route path='/home' element={<Home/>} exact/>
         <Route path='/add-visitor' element={<Visitor/>} exact/>
-        <Route path='/add-counsellor' element={<Counsellor/>} exact/>
+        <Route path='/fetchregistration' element={<FetchRegistration/>} exact/>
         <Route path='/signup' element={<Signup/>} exact/>
         <Route path='/signin' element={<Signin/>} exact/>
         <Route path='/appointment' element={<Appointment/>} exact/>
         <Route path='/contact' element={<Contact/>} exact/>
         <Route path='/about' element={<About/>}exact/>
-        <Route path='/PRODUCTCATOLOG' element={<ProductCatalog/>}exact/>
+        <Route path='/datafetch' element={<FetchRegistration/>}exact/>
+        
       </Routes>
     </main>
     <footer>
