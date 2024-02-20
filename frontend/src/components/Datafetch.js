@@ -14,9 +14,9 @@ const DataFetch = () => {
       })
       .catch(error => {
         console.error('Error fetching data:', error);
-        setPosts({}); // Set posts to an empty object in case of an error
+        setPosts({}); 
       });
-  }, [buttonId, id]); // Added 'id' to the dependency array since it is being used inside the effect
+  }, [buttonId, id]); 
 
   const handleClick = () => {
     setButtonId(id);
