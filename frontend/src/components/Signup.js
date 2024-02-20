@@ -51,15 +51,13 @@ export default function SignUp() {
     axios.post('http://localhost:8080/register', {
       firstName: data.get('firstName'),
       email: data.get('email'),
-      password: data.get('pas'),
+      password: data.get('password'),
       role: role,
     }).then(res => {
       console.log(res.data);
     });
   };
   
-  
-
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
