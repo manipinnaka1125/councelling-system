@@ -15,8 +15,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
+import { useNavigate } from 'react-router-dom';
 import Select from '@mui/material/Select';
 import axios from 'axios';
+
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -33,8 +36,9 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
+  const navigate = useNavigate();
   const [role, setRole] = React.useState('');
-
+  
   const handleRoleChange = (event) => {
     setRole(event.target.value);
   };
@@ -56,6 +60,7 @@ export default function SignUp() {
     }).then(res => {
       console.log(res.data);
     });
+    navigate('/Sucess')
   };
   
   return (

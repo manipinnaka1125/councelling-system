@@ -37,5 +37,11 @@ app.put('/users/:id', async (req,res)=>{
     res.send('updated') 
 })
 
+app.delete('/users/:id',async (req,res)=>{
+    const {id}=req.params
+    const result= await col.deleteOne({_id:new ObjectId(id)})
+    res.json({message:'deleted sucessfully'})
+})
+
   
 app.listen(8080,()=>{console.log('express server is running')})
