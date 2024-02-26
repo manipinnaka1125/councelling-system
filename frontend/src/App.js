@@ -7,10 +7,9 @@ import Appointment from './components/Appointment';
 import Visitor from './components/Visitor';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
-
+import Sucess from './components/Sucess';
 import Contact from './components/Contact';
 import About from './components/About';
-
 import FetchRegistration from './components/Fetchregistrations';
 
 
@@ -31,6 +30,7 @@ function App() {
         <Route path='/appointment' element={<Appointment/>} exact/>
         <Route path='/contact' element={<Contact/>} exact/>
         <Route path='/about' element={<About/>}exact/>
+        <Route path='/Sucess' element={<Sucess/>}exact/>
         <Route path='/datafetch' element={<FetchRegistration/>}exact/>
         
       </Routes>
