@@ -23,6 +23,13 @@ const FetchRegistration = () => {
       fetchData(); 
       console.log(res.data) 
       } 
+      const handleDelete=async(id)=>{
+        await axios.delete(`http://localhost:8080/users/${id}`)
+        .then(response=>{
+          console.log(response.data)
+        })
+        fetchData()
+      }
     const changeHandler=(e)=>{ 
         setFormData({ ...formData, [e.target.name]: e.target.value}); 
       };   
@@ -59,6 +66,7 @@ const FetchRegistration = () => {
                 placeholder='New Password'  
                 onChange={changeHandler}/> 
                 <button onClick={()=>updateData(item._id)}>update</button> 
+                <button onClick={()=>handleDelete(item._id)}>delete</button> 
             </td>
           </tr>
         ))
