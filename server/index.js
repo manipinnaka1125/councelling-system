@@ -21,6 +21,16 @@ app.get('/retrive', async (req, res) => {
     console.log(result)
     res.send(result)
 })
+app.post('/login',async(req,res)=>{
+    const {email,password}=req.body;
+    console.log(req.body)
+    const user=await col.findOne({email});
+    if(!user||!(password===user.password)){
+        return res.status(401).json({message:'INvalid email or password'})
+    }
+ 
+    res.json({username:user.name});
+})
 
 
 app.get('/',(req,res)=>{

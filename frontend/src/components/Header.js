@@ -36,7 +36,7 @@ const Header = () => {
               <Tab component={NavLink} to='/home' label="Home"/>
               <Tab component={NavLink} to='/fetchregistration' label="Fetchregistration"/>
               <Tab component={NavLink} to='/appointment' label="Appointment"/>
-              <Tab component={NavLink} to='/add-visitor' label="Add Visitor"/>
+              <Tab component={NavLink} to='/Fetchdata' label="fetchdata"/>
               <Tab component={NavLink} to='/signin' label="Sign In"/>
               <Tab component={NavLink} to='/signup' label="Sign Up"/>
               <Tab component={NavLink} to='/contact' label="CONTACT"/>

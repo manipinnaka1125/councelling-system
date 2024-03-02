@@ -60,7 +60,7 @@ export default function SignUp() {
     }).then(res => {
       console.log(res.data);
     });
-    navigate('/Sucess')
+    navigate('/Sucess1')
   };
   
   return (
