@@ -36,8 +36,9 @@ function Signin() {
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.username]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  
 
   return (
     <ThemeProvider theme={createTheme()}>
